@@ -10,8 +10,7 @@ body {
 }
 
 /* Add styles here! */
-
-#root {
+:root {
   --primary: hsl(160deg, 100%, 30%);
   --secondary-light: hsl(45deg, 100%, 50%);
   --secondary-dark: hsl(45deg, 100%, 40%);
@@ -26,4 +25,70 @@ body {
   --text-large: 1.25rem;
   --text-larger: 1.5rem;
   --text-largest: 2rem;
+
+  --gap-1: 8px;
+  --gap-2: 16px;
+  --gap-3: 24px;
+  --gap-4: 32px;
+  --gap-6: 48px;
+  --gap-8: 64px;
+  --gap-12: 96px;
+  --gap-16: 128px;
+}
+
+.max-width-wrapper {
+  max-width: calc(var(--gap-1) * 100);
+  margin: auto;
+}
+
+header {
+  padding-block-start: calc(var(--gap-1) * 9);
+  padding-block-end: calc(var(--gap-1) * 6);
+}
+
+header h1 {
+  font-size: var(--text-largest);
+  margin-bottom: var(--gap-6);
+}
+
+header .intro-chunk {
+  max-width: calc(var(--gap-1) * 56);
+}
+
+p {
+  font-size: var(--text-large);
+}
+
+p strong {
+  color: var(--primary);
+}
+
+main {
+  background-color: var(--gray-medium);
+  border-top: solid var(--gap-1) var(--gray-light);
+  padding-block: var(--gap-8);
+}
+
+h2 {
+  margin: 0;
+}
+
+.intro-chunk,
+.card {
+  padding-inline: var(--gap-3);
+}
+
+.card {
+  background-color: var(--white);
+  border-bottom: solid var(--gap-1) var(--gray-light);
+  padding-top: var(--gap-1);
+}
+
+.card .indented-heading {
+  background-color: var(--secondary-light);
+  border-bottom: solid var(--gap-1) var(--secondary-dark);
+  margin-inline-start: calc(var(--gap-4) * -1);
+  padding-inline: var(--gap-4);
+  padding-block: var(--gap-2);
+  width: fit-content;
 }
